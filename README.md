@@ -1,6 +1,33 @@
-# AngularStyleShowcase
+# Angular Style Showcase
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+## Project Description
+
+The Angular Style Showcase is a demonstration application built using Angular CLI to showcase proficiency in Angular project structure, component-based architecture, and advanced SCSS features. This project includes a responsive layout with a custom theme system and advanced CSS preprocessing techniques such as variables, nesting, mixins, functions, and extend/inheritance. The application consists of a header, footer, main content area, and child components, with one custom Angular directive and lazy-loaded modules.
+
+## Features
+
+- **Responsive Layout**: The application is fully responsive, ensuring a great user experience on both desktop and mobile devices.
+- **Theming**: Includes a light and dark theme system using SCSS.
+- **Advanced SCSS Techniques**:
+  - **Variables**: Used for colors, fonts, and spacing for consistency and easy maintenance.
+  - **Nesting**: Utilized for component-specific styles.
+  - **Mixins**: Created reusable style patterns (e.g., flexbox layouts, button styles).
+  - **Functions**: Custom functions for dynamic value calculations (e.g., converting px to rem).
+  - **Extend/Inheritance**: Shared common styles among components.
+  - **Partials**: Organized styles into separate files for better maintainability.
+- **Custom Directive**: Includes a custom Angular directive with host binding for dynamic styling.
+- **Lazy Loading**: Implemented for at least one module to optimize application performance.
+- **Angular CLI**: Used for generating components, directives, services, building for production, running unit tests, and linting the codebase.
+
+## Setup and Run Instructions
+
+To set up and run the Angular Style Showcase application locally, follow these steps:
+
+1. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   cd angular-style-showcase
+
 
 ## Development server
 
