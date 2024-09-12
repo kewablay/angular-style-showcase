@@ -1,1 +1,148 @@
-/* You can add global styles to this file, and also import other style files */
+$font-Anton: "Anton SC", sans-serif
+$font-Manrope: "Manrope", sans-serif
+
+
+// Colors 
+$dark-purple: #11001C
+$clr-purple-700: #190028
+$clr-primary: #D5FF60
+$clr-black: #000000
+$clr-white: #FFFFFF
+$clr-light-bg: #FEFBFF
+$clr-light-accent: #F2E8F6
+$clr-light-accent-100: #F2E8F6
+$clr-grey: #A8A8A8
+
+// Spacing
+$space-50: 0.5rem
+$space-100: 1rem
+$space-200: 2rem
+$space-300: 3rem
+$space-400: 4rem
+$space-500: 5rem
+
+// Typography
+$fs-100: 1rem
+$fs-200: 1.2rem
+$fs-300: 1.5rem
+$fs-400: 1.8rem
+$fs-500: 2.5rem
+
+// Theme Colors
+$dark-mode: (background: $dark-purple, primary: $clr-primary, bg-accent: $clr-black, bg-accent-100: $clr-purple-700, text: $clr-white, text-secondary: $clr-grey)
+$light-mode: (background: $clr-light-bg, primary: $clr-primary, bg-accent: $clr-light-accent, bg-accent-100: $clr-light-accent-100, text: $clr-black, text-secondary: $clr-grey)
+
+
+
+:root 
+  @each $key, $value in $dark-mode 
+    --#{$key}: #{$value}
+  
+[data-theme="light"]
+  @each $key, $value in $light-mode
+    --#{$key}: #{$value}
+
+
+// Mixins
+@mixin flex($direction: row)
+    display: flex
+    flex-direction: $direction
+
+    @if $direction == row
+        align-items: center
+    @else
+        justify-content: center
+
+// Functions
+@mixin flex-between($direction: row) 
+    display: flex 
+    flex-direction: $direction
+    @if $direction == row
+        justify-content: space-between
+        align-items: center
+    @else
+        align-items: space-between
+        justify-content: center
+
+@mixin grid($repeat: 1)
+    display: grid
+    grid-template-columns: repeat($repeat, 1fr)
+
+@mixin button($color: $clr-primary, $font-size: $fs-100)
+    background: $color
+    color: $clr-black
+    font-size: $font-size
+    border: none
+    border-radius: 2rem
+    padding: .7rem $space-200
+
+%card 
+    border-radius: 10px
+    padding: $space-100
+    overflow: hidden
+    position: relative
+
+
+.card 
+    @extend %card
+    @include flex($direction: column)
+    height: 20rem
+    z-index: 1
+
+
+    &:hover
+        img
+            filter: grayscale(0%)
+            opacity: 1
+
+    img
+        position: absolute
+        inset: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+        z-index: -1
+        filter: grayscale(10%)
+        opacity: .6
+        transition: .2s ease
+        
+
+    .content
+        margin-top: auto
+        // height: 40%
+        background: #000
+        color: white
+        margin-inline: -1rem 
+        margin-bottom: -1rem
+        padding: 1rem
+        background: linear-gradient(0deg, #081211 2.59%, rgba(12, 17, 16, 0.50) 66.16%, rgba(16, 15, 16, 0.00) 108.14%)
+        h3
+            margin-block: 0
+            font-size: 20px
+
+
+        p
+            font-size: 14px
+            margin-block: .5rem
+
+
+    
+
+.font-anton
+    font-family: $font-Anton
+
+.font-manrope  
+    font-family: $font-Manrope
+
+.title 
+    font-size: $fs-400
+
+.section-title
+    font-size: $fs-100
+    margin-bottom: $space-100
+    text-align: center
+
+body
+    background: var(--background)
+    color: var(--text)
+    font-family: $font-Anton

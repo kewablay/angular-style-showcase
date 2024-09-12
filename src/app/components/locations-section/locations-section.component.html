@@ -1,0 +1,18 @@
+<section class="locations-section">
+  <h2>The Ultimate Adventure Locations</h2>
+
+  <div class="locations-grid">
+    @for(location of locations; track location) {
+
+    <div class="card">
+      <img [src]="location.image" alt="{{ location.name }}" />
+      <div class="content">
+        <h3 class="title font-anton">{{ location.name }}</h3>
+        <p class="description font-manrope">
+          {{ location.description }}
+        </p>
+      </div>
+    </div>
+    }
+  </div>
+</section>

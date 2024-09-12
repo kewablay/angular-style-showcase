@@ -1,0 +1,39 @@
+@use '../../../styles.sass'
+  
+    
+.hero-section   
+    justify-content: center
+    margin-top: styles.$space-100
+    position: relative 
+    height: 30rem
+    border-radius: 8px
+    overflow: hidden 
+
+    .bg-video 
+        position: absolute 
+        inset: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+        object-fit: cover
+    .content 
+        @include styles.flex($direction: column)
+        text-align: center
+        color: styles.$clr-white
+        position: absolute
+        align-items: center
+        width: 100%
+        height: 100%
+        background: #0000009e
+
+        .hero-subtext
+            margin-inline: 1rem
+
+        button 
+            @include styles.button()
+            
+
+@media screen and (min-width: 768px)
+
+    .hero-section   
+        height: 45rem

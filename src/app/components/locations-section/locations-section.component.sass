@@ -1,0 +1,61 @@
+@use '../../../styles.sass'
+.locations-section  
+    padding: 2rem
+    background: var(--bg-accent)
+
+    h2 
+        margin-bottom: 3rem
+        font-size: styles.$fs-300
+        text-align: center
+    .locations-grid 
+        display: grid
+        gap: 2rem
+
+
+
+
+@media screen and (min-width: 630px)
+    .locations-section
+       
+        .locations-grid 
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-rows: repeat(3, 1fr)
+            grid-column-gap: 2rem
+            grid-row-gap: 2rem
+
+
+            .card:nth-child(1) 
+                grid-area: 1 / 1 / 2 / 4
+            .card:nth-child(2) 
+                grid-area: 2 / 1 / 3 / 2
+            .card:nth-child(3)  
+                grid-area: 2 / 2 / 3 / 3
+            .card:nth-child(4)  
+                grid-area: 3 / 1 / 4 / 2
+            .card:nth-child(5)  
+                grid-area: 3 / 2 / 4 / 3
+
+
+@media screen and (min-width: 768px)
+    .locations-section
+        padding-inline: 2rem
+
+        .locations-grid 
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            grid-template-rows: repeat(2, 1fr)
+            grid-column-gap: 2rem
+            grid-row-gap: 2rem
+
+
+            .card:nth-child(1) 
+                grid-area: 1 / 1 / 2 / 3 
+            .card:nth-child(2) 
+                grid-area: 1 / 3 / 2 / 4 
+            .card:nth-child(3)  
+                grid-area: 2 / 1 / 3 / 2 
+            .card:nth-child(4)  
+                grid-area: 2 / 2 / 3 / 3
+            .card:nth-child(5)  
+                grid-area: 2 / 3 / 3 / 4
