@@ -1,13 +1,16 @@
 @use '../../../styles.sass'
 @use '../../../styles/_variables.sass' as Variables
+@use '../../../styles/_mixins.sass' as Mixins
 .locations-section  
     padding: 2rem
+    padding-bottom: 3rem
     background: var(--bg-accent)
+    border-radius: 10px
 
-    h2 
-        margin-bottom: 3rem
-        font-size: Variables.$fs-300
-        text-align: center
+    .section-title
+        .highlight
+            color: var(--highlight) !important
+
     .locations-grid 
         display: grid
         gap: 2rem
@@ -40,8 +43,22 @@
 
 @media screen and (min-width: 768px)
     .locations-section
-        padding-inline: 2rem
+        padding-inline: 4rem
+        position: relative
+        z-index: 2
+        overflow: hidden
 
+        .arrow-container
+            position: absolute
+            top: -1rem
+            left: 50%
+            right: 50%
+            
+            // position: absolute
+            // left: 50%
+            // right: 50%
+            // top: 0
+        
         .locations-grid 
             display: grid
             grid-template-columns: repeat(3, 1fr)

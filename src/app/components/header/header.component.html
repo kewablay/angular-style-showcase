@@ -1,7 +1,15 @@
 <header>
   <button>menu</button>
 
-  <div class="logo">logo</div>
+  <div class="logo">
+    @if(currentTheme == 'light'){
+
+    <img src="assets/images/logo-light.svg" alt="logo" />
+    } @else {
+    <img src="assets/images/logo-dark.svg" alt="logo" />
+
+    }
+  </div>
 
   <button class="theme-toggle" (click)="toggleTheme()">toggle theme</button>
 </header>

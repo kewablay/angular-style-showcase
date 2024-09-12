@@ -18,7 +18,7 @@
         height: 100%
         z-index: -1
         object-fit: cover
-    .content 
+    .content   
         @include Mixins.flex($direction: column)
         text-align: center
         color: Variables.$clr-white
@@ -28,8 +28,10 @@
         height: 100%
         background: #0000009e
 
+
         .hero-subtext
             margin-inline: 1rem
+            max-width: 30rem
 
         button 
             @include Mixins.button()
@@ -38,4 +40,9 @@
 @media screen and (min-width: 768px)
 
     .hero-section   
-        height: 45rem
+        height: 42rem
+
+        .content
+            
+            .hero-subtext
+                font-size: 18px

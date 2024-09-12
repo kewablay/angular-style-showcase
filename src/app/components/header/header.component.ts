@@ -6,11 +6,17 @@ import { ThemeService } from '../../services/theme.service';
   standalone: true,
   imports: [],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.sass'
+  styleUrl: './header.component.sass',
 })
 export class HeaderComponent {
-  constructor(private themeService: ThemeService){}
+  currentTheme: 'light' | 'dark' = 'dark';
+  constructor(private themeService: ThemeService) {}
   toggleTheme() {
-    this.themeService.toggleTheme()
+    this.themeService.toggleTheme();
+    this.currentTheme = this.themeService.getCurrentTheme();
+  }
+
+  ngOnInit() {
+    this.currentTheme = this.themeService.getCurrentTheme();
   }
 }
