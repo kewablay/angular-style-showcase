@@ -2,14 +2,19 @@
 @use '../../../styles/_variables.sass' as Variables
 @use '../../../styles/_mixins.sass' as Mixins
 .locations-section  
+    margin-top: 8rem
     padding: 2rem
     padding-bottom: 3rem
     background: var(--bg-accent)
     border-radius: 10px
 
+    .arrow-container
+        display: none
+
     .section-title
-        .highlight
-            color: var(--highlight) !important
+        h2
+            span
+                color: var(--highlight) !important
 
     .locations-grid 
         display: grid
@@ -53,6 +58,7 @@
             top: -1rem
             left: 50%
             right: 50%
+            display: initial
             
             // position: absolute
             // left: 50%
