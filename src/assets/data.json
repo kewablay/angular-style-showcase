@@ -1,0 +1,55 @@
+{
+  "gears": [
+    {
+      "id": 1,
+      "name": "Climbing Harness",
+      "description": "Durable harness designed for long climbs. Features adjustable straps and multiple gear loops.",
+      "image": "assets/images/climbing-harness.png"
+    },
+    {
+      "id": 2,
+      "name": "Lightweight Backpack",
+      "description": "A versatile backpack perfect for day hikes. Ergonomic design with ample storage and hydration reservoir.",
+      "image": "assets/images/lightweight-bagpack.png"
+    },
+    {
+      "id": 3,
+      "name": "Sleeping Bag",
+      "description": "Warm and lightweight sleeping bag designed for comfort in various weather conditions. Includes stuff sack.",
+      "image": "assets/images/sleeping-bag.png"
+    }
+  ],
+
+  "locations": [
+    {
+      "id": 1,
+      "name": "Yosemite National Park, USA",
+      "description": "Iconic climbs and hikes in nature's grandest amphitheater.",
+      "image": "assets/images/yosemite-national-park.png"
+    },
+    {
+      "id": 2,
+      "name": "Amazon Rainforest, Brazil",
+      "description": "Venture into the world's largest rainforest and discover hidden gems",
+      "image": "assets/images/amazon-rain-forest.png"
+    },
+    {
+      "id": 3,
+      "name": "The Sahara, Morocco",
+      "description": "Experience the mystique of the desert with guided treks",
+      "image": "assets/images/sahara.png"
+    },
+    {
+      "id": 4,
+      "name": "Patagonia, Argentina",
+      "description": "Experience the mystique of the desert with guided treks",
+      "image": "assets/images/patagonia.png"
+    },
+    {
+      "id": 5,
+      "name": "Iceland",
+      "description": "Explore the land of fire and ice with otherworldly landscapes.",
+      "image": "assets/images/iceland.png"
+    }
+  ]
+}
