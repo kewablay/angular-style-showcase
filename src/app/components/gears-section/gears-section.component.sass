@@ -1,4 +1,5 @@
 @use '../../../styles.sass'
+@use '../../../styles/_mixins.sass' as Mixins
     
 .gears-section 
     padding-inline: 1rem
@@ -9,7 +10,7 @@
             margin-bottom: 3rem
 
     .gears-cards 
-        @include styles.grid($repeat: 1)
+        @include Mixins.grid($repeat: 1)
         gap: 2rem
 
 
@@ -19,7 +20,7 @@
 @media screen and (min-width: 567px)
     .gears-section 
         .gears-cards 
-            @include styles.grid($repeat: 2)
+            @include Mixins.grid($repeat: 2)
             gap: 2rem 
 
             .card 
@@ -30,4 +31,4 @@
 @media screen and (min-width: 1024px)
     .gears-section 
         .gears-cards
-            @include styles.grid($repeat: 3)
+            @include Mixins.grid($repeat: 3)

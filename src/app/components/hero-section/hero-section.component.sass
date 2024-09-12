@@ -1,9 +1,11 @@
 @use '../../../styles.sass'
+@use '../../../styles/_mixins.sass' as Mixins
+@use '../../../styles/_variables.sass' as Variables
   
     
 .hero-section   
     justify-content: center
-    margin-top: styles.$space-100
+    margin-top: Variables.$space-100
     position: relative 
     height: 30rem
     border-radius: 8px
@@ -17,9 +19,9 @@
         z-index: -1
         object-fit: cover
     .content 
-        @include styles.flex($direction: column)
+        @include Mixins.flex($direction: column)
         text-align: center
-        color: styles.$clr-white
+        color: Variables.$clr-white
         position: absolute
         align-items: center
         width: 100%
@@ -30,7 +32,7 @@
             margin-inline: 1rem
 
         button 
-            @include styles.button()
+            @include Mixins.button()
             
 
 @media screen and (min-width: 768px)

@@ -1,3 +1,5 @@
+@use './_variables.sass' as Variables
+    
 @mixin flex($direction: row)
     display: flex
     flex-direction: $direction
@@ -21,10 +23,10 @@
     display: grid
     grid-template-columns: repeat($repeat, 1fr)
 
-@mixin button($color: $clr-primary, $font-size: $fs-100)
+@mixin button($color: Variables.$clr-primary, $font-size: Variables.$fs-100)
     background: $color
-    color: $clr-black
+    color: Variables.$clr-black
     font-size: $font-size
     border: none
     border-radius: 2rem
-    padding: .7rem $space-200
+    padding: .7rem Variables.$space-200
