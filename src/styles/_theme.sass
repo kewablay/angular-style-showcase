@@ -1,0 +1,11 @@
+// Theme Colors
+$dark-mode: (background: $dark-purple, primary: $clr-primary, bg-accent: $clr-black, bg-accent-100: $clr-purple-700, text: $clr-white, text-secondary: $clr-grey)
+$light-mode: (background: $clr-light-bg, primary: $clr-primary, bg-accent: $clr-light-accent, bg-accent-100: $clr-light-accent-100, text: $clr-black, text-secondary: $clr-grey)
+
+:root 
+  @each $key, $value in $dark-mode 
+    --#{$key}: #{$value}
+  
+[data-theme="light"]
+  @each $key, $value in $light-mode
+    --#{$key}: #{$value}
